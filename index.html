@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gleam Gathering 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    :root {
+      --brand-primary: #FAAFEE;
+      --brand-dark: #292d3e;
+      --brand-light: #fffbe8;
+      --text-dark: #1e1e1e;
+      --text-light: #fefefc;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--brand-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--brand-primary);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-dark);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1,
+    h2 {
+      color: var(--brand-dark);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--brand-light);
+      color: var(--text-dark);
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .interest-form {
+      margin-top: 30px;
+      background: var(--text-light);
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .interest-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .interest-form input,
+    .interest-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 14px;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: var(--brand-dark);
+      color: var(--text-light);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.4em;
+    }
+  </style>
+  <script defer data-domain="gleamgathering.com" src="https://plausible.io/js/script.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Gleam Gathering 2026</h1>
+    <p>The celebration of the Gleam language, the community and all things Gleamy.</p>
+  </header>
+
+  <img src="https://gleam.run/images/lucy/lucy.svg" alt="Gleam Logo"
+    style="width: 180px; height: auto; margin: 20px auto; display: block;">
+
+  <main>
+    <section id="about">
+      <h2>About the Gathering</h2>
+      <p>Welcome! You've found the registration of interest page for the Gleam Gathering in February 2026.</p>
+      <p>We want to bring the wonderful Gleam community together in the UK
+        for a one-day conference, talking all things Gleamy.
+        To do this, we need an indication of the interest levels, so
+        that we can find a venue which fits the likely attendee numbers.</p>
+      <p>So, think this sounds like something you want to be a part of? Something you simply cannot miss? Register your
+        email address below and we will bring the Gathering to the people.</p>
+
+      <section id="register" class="interest-form">
+        <h2>Register Your Interest</h2>
+        <form netlify>
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">A quick note for us, anything you'd like to see?</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="formFeedback" style="margin-top:12px;"></div>
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gleam Gathering. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
