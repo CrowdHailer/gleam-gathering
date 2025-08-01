@@ -115,7 +115,7 @@
   <main>
     <section id="about">
       <h2>About the Gathering</h2>
-     <p>Welcome - you've found the information hub for the Gleam Gathering 2026.</p> 
+    <p>Welcome - you've found the information hub for the Gleam Gathering 2026.</p> 
 <p>Thank you so much to everyone who took the time to register their interest in the Gathering. The feedback we got was insightful and honest, and we will listen to it as much as possible going forward with the event. And due to the volume of responses, we can confirm that GLEAM GATHERING 2026 IS A GO! We will be gathering on <strong> Saturday 21 February 2026 in Bristol, UK</strong>! Tickets will go on sale shortly (watch this space).</p>
 
 
@@ -186,7 +186,7 @@ We’re committed to supporting every speaker who submits a proposal. Here’s w
     	  <option value="">--Please choose an option--</option>
      	 <option value="30min">30 mins</option>
       	<option value="45min">45 mins</option>
-	<option value="Either">I can do 30 or 40</option>
+	<option value="Either">I can do 30 or 45</option>
    	 </select><br><br>
 
 
@@ -220,10 +220,243 @@ We’re committed to supporting every speaker who submits a proposal. Here’s w
     });
   </script>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popup Example</title>
+  <style>
+    /* The popup background (overlay) */
+   .popup-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+
+  /* Center the popup content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+    /* The popup box */
+    .popup-content {
+      background-color: white;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Close button */
+    .close-btn {
+      margin-top: 15px;
+      cursor: pointer;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="openPopup()">Privacy Policy</button>
+
+  <!-- Popup Structure -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <p><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1 {
+      color: #004080;
+      text-align: center;
+    }
+
+    .accordion {
+      border-top: 1px solid #ccc;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-button {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #004080;
+      cursor: pointer;
+      outline: none;
+      transition: background 0.2s;
+    }
+
+    .accordion-button:hover {
+      background: #f1f1f1;
+    }
+
+    .accordion-content {
+      padding: 0 1rem 1rem 1rem;
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .accordion-content.open {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy</h1>
+  <p><strong>Last updated:</strong> 01 August 2025</p>
+  <p>We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your data when you register for or attend Gleam Gathering.</p>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-button">1. Who We Are</button>
+      <div class="accordion-content">
+        <p>We are the organisers of <strong>Gleam Gathering</strong>, a technology event held in the UK. If you have any questions about this Privacy Policy or how we handle your data, you can contact us at:</p>
+        <p>
+          <strong>Email:</strong> gleamgathering2026@gmail.com<br>
+          <strong>Address:</strong> Orway House, Kentisbeare, Devon
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">2. What Data We Collect</button>
+      <div class="accordion-content">
+        <p>When you register for the conference, we collect:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Your email address</li>
+        </ul>
+        <p>We do <strong>not</strong> collect any other personal data unless you provide it voluntarily.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">3. Why We Collect Your Data</button>
+      <div class="accordion-content">
+        <p>We collect your name and email address to:</p>
+        <ul>
+          <li>Process your ticket and confirm your registration</li>
+          <li>Send you important updates about the event (such as schedule changes, speaker announcements, or venue information)</li>
+          <li>Send post-event follow-ups, such as recordings or feedback surveys (optional)</li>
+        </ul>
+        <p>We do <strong>not</strong> sell or share your data with third parties for marketing purposes.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">4. Legal Basis for Processing</button>
+      <div class="accordion-content">
+        <p>We process your personal data on the basis of:</p>
+        <ul>
+          <li><strong>Contract</strong> – to provide you with access to the event you have registered for</li>
+          <li><strong>Legitimate interest</strong> – to send relevant updates related to the event</li>
+          <li><strong>Consent</strong> – for optional communications after the event (you can opt out at any time)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">5. How We Store and Protect Your Data</button>
+      <div class="accordion-content">
+        <p>Your data is stored securely and only accessible by us.</p>
+        <p>We will only keep your data for as long as necessary. Typically, this means:</p>
+        <ul>
+          <li>Until the event is over</li>
+          <li>Up to 12 months afterwards for follow-up communication</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">6. Your Rights</button>
+      <div class="accordion-content">
+        <p>Under the UK and EU GDPR, you have the right to:</p>
+        <ul>
+          <li>Access the personal data we hold about you</li>
+          <li>Correct any inaccurate data</li>
+          <li>Request deletion of your data</li>
+          <li>Object to or restrict how we use your data</li>
+          <li>Withdraw your consent at any time</li>
+        </ul>
+        <p>To exercise these rights, email us at <strong> gleamgathering2026@gmail.com</strong>.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">7. Cookies & Website Tracking</button>
+      <div class="accordion-content">
+        <p>We may use analytics tools on our website to help improve your experience. This does <strong>not</strong> include your name or email address unless you submit them via a form.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-button">8. Changes to This Policy</button>
+      <div class="accordion-content">
+        <p>We may update this policy from time to time. If we make significant changes, we’ll notify you by email or post a clear notice on our website.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Accordion logic
+    const buttons = document.querySelectorAll('.accordion-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.classList.toggle('open');
+      });
+    });
+  </script>
+</p>
+      <div class="close-btn" onclick="closePopup()">Close</div>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
 
-
 </body>
-
 </html>
