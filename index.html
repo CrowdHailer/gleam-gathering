@@ -57,6 +57,10 @@
       outline: none;
     }
 
+    ol,ul {
+      /* list-style-position: inside; */
+      padding-left: 1.5em; /* Create inset space for wrapped lines */
+    }
     /* Elements */
 
     header {
@@ -136,15 +140,14 @@
       margin-bottom: 10px;
     }
 
-    main > section {
-      padding-top: 1em;
-      padding-bottom: 1em;
+    main>section {
+      padding: 1em 20px;
     }
 
     main>section>* {
       margin: 0 auto;
       max-width: var(--width-content);
-      padding: 0 20px;
+      /* can't use padding as used by fix to list items */
     }
 
     section>h2,
@@ -186,6 +189,7 @@
       border-radius: 20px;
       overflow: hidden;
     }
+
     .alt .card {
       border: 2px solid var(--brand-light);
     }
@@ -234,6 +238,7 @@
     .interest-form {
       margin-top: 30px;
       background: var(--text-light);
+      color: var(--text-dark);
       padding: 20px;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -344,7 +349,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <!-- Make sure you put this AFTER Leaflet's CSS -->
-   <script src="https://js.tito.io/v2" async></script>
+  <script src="https://js.tito.io/v2" async></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script defer data-domain="gleamgathering.com" src="https://plausible.io/js/script.js"></script>
@@ -434,14 +439,14 @@
       <p>
         Bristol is a really well connected city, with lots of opportunities to use public transport.
       </p>
-      <div>
-        <ol>
-          <li>Bus - there are National Express buses from London to the heart of Bristol</li>
-          <li>Planes - Bristol Airport receives international flights and has great connections to the city</li>
-          <li>Train - Bristol Temple Mead is the main train station - Origin is about a 30min walk from there. There's
-            also a frequent local bus service between the station and the part of town Origin is in. </li>
-        </ol>
-      </div>
+
+      <ol>
+        <li>Bus - there are National Express buses from London to the heart of Bristol</li>
+        <li>Planes - Bristol Airport receives international flights and has great connections to the city</li>
+        <li>Train - Bristol Temple Mead is the main train station - Origin is about a 30min walk from there. There's
+          also a frequent local bus service between the station and the part of town Origin is in. </li>
+      </ol>
+
       <p>
         If you need any further information, please do check the Origin Workspace website for more details: <a
           href="https://originworkspace.co.uk/contact/">https://originworkspace.co.uk/contact/</a>
@@ -454,7 +459,7 @@
         We are also keeping this first meet relatively small, so numbers are limited - our venue maxes out at 100.
       </p>
       <div>
-        <tito-widget  event="eyg/gleam-gathering-2026">Buy Tickets</tito-widget>
+        <tito-widget event="eyg/gleam-gathering-2026">Buy Tickets</tito-widget>
       </div>
     </section>
     <section id="call-for-talks" class="contrast">
