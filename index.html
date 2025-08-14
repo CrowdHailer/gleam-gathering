@@ -45,6 +45,10 @@
       color: var(--brand-dark);
     }
 
+    h3 {
+      margin: 0;
+    }
+
     a {
       text-decoration: none;
       outline: none;
@@ -57,13 +61,10 @@
       max-width: var(--width-content);
       margin-left: auto;
       margin-right: auto;
-      padding: 8px 20px;
+      padding: 0 20px;
       color: var(--text-dark);
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
+      text-align: center;
       font-size: 20px;
       /* position: sticky;
       top: 0;
@@ -71,15 +72,33 @@
       background-color: #fffbe8aa; */
     }
 
+    @media (min-width: 900px) {
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+      }
+    }
+
     header> :first-child {
       font-size: 140%;
       font-weight: bold;
+      margin-top: 16px;
+      margin-bottom: 16px;
     }
 
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
 
     header nav a {
       color: var(--text-dark);
-      margin-left: 20px;
+      white-space: nowrap;
     }
 
     header nav a:hover,
@@ -96,6 +115,7 @@
       align-items: center;
       justify-content: space-around;
       gap: 20px;
+      font-size: 24px;
     }
 
     .hero img {
@@ -104,17 +124,57 @@
       display: block;
     }
 
-    .speakers {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .hero>* {
+      max-width: 60%;
     }
 
-    .speakers > div {
+    .speakers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+    }
+
+    @media (min-width: 900px) {
+      .speakers {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+
+    .card {
       background-color: white;
       border: 2px solid var(--brand-primary);
-      border-radius: 8px;
-      padding: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .card>img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card>p,
+    .card>h3 {
+      margin: 12px 0;
+      padding: 0 10px;
+    }
+
+    #map {
+      height: 400px;
+    }
+
+    .button {
+      padding: 4px;
+      border-radius: 12px;
+    }
+
+    .button.impact {
+      font-weight: bold;
+      background-color: var(--brand-dark);
+      color: var(--brand-primary);
+      padding: 10px;
     }
 
     .btn {
@@ -239,6 +299,11 @@
       color: blue;
     }
   </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script defer data-domain="gleamgathering.com" src="https://plausible.io/js/script.js"></script>
 </head>
 
@@ -247,10 +312,10 @@
   <header>
     <div>Gleam Gathering 2026</div>
     <nav>
-      <a href="#speakers">Speakers</a>
-      <a href="#">Call for Talks</a>
-      <a href="#">Venue</a>
-      <a href="#">Register</a>
+      <a href="#speakers" class="button">Speakers</a>
+      <a href="#venue" class="button">Venue</a>
+      <a href="#call-for-talks" class="button">Call for Talks</a>
+      <a href="#" class="button impact">Register</a>
     </nav>
   </header>
   <div class="hero">
@@ -258,7 +323,7 @@
     <div>
       <p>Join us for the <strong>first ever</strong> Gleam conference</p>
       <p>A celebration of the language, the community and all things Gleamy.</p>
-      <a href="">Register</a>
+      <a href="" class="button impact">Register</a>
     </div>
   </div>
 
@@ -276,18 +341,43 @@
     <section id="speakers">
       <h2>Speakers</h2>
       <div class="speakers">
-        <div>
-          <p>Louis</p>
-          <p>Keynote</p>
+        <div class="card">
+          <img src="./Louis-Pilfold.jpg" alt="">
+          <h3>Louis Pilfold</h3>
+          <p>Creator of the Gleam Language</p>
+          <p>Hello! I’m Louis, the creator of the Gleam programming language, a friendly language for building type-safe
+            systems that scale! It runs on the Erlang virtual machine, as well as on JavaScript runtimes. Most
+            importantly, it has a lovely and vibrant community, so come say hi!</p>
         </div>
-        <div>
+        <div class="card">
+          <img src="./Giacomo_Cavalieri.jpg" alt="">
+          <h3>Giacomo Cavalieri</h3>
+          <p>Gleam Core Team Member</p>
+          <p>Giacomo is a software developer and a functional programming enthusiast. Upon discovering Gleam he couldn’t
+            help but fall in love with the language and its friendly community. He’s now a member of Gleam’s core team
+            and an active contributor to its compiler’s development.”</p>
+        </div>
+        <div class="card">
+          <img src="./Hayleigh_Thompson.jpg" alt="">
+          <h3>Hayleigh Thompson</h3>
+          <p>Gleam Core Team</p>
+          <p>Hayleigh is the author of Lustre, Gleam’s most popular frontend Web framework as well as an ecosystem of
+            packages that support it. She is an experienced Web developer and Elm engineer. More recently, Hayleigh has
+            spent the last few years acting as a developer evangelist; spreading the good word about types, the BEAM,
+            and Gleam to anyone with the patience to listen to her.</p>
+        </div>
+        <div class="card">
+          <img src="https://gleam.run/images/lucy/lucypinkbg.svg" alt="">
           <p>You</p>
           <p>See our Call for talks</p>
         </div>
       </div>
-    
     </section>
-    <section>
+    <section id="venue">
+      <h2>Venue</h2>
+      <div id="map"></div>
+    </section>
+    <section id="call-for-talks">
       <h2>Call for talks!</h2>
       <p> We’re now accepting talk proposals for Gleam Gathering 2026. Whether you’re an experienced speaker or new to
         presenting, we want to hear your ideas. This is your chance to contribute to the community, share knowledge, and
@@ -506,6 +596,20 @@
     function closePopup() {
       document.getElementById("privacy-policy").style.display = "none";
     }
+  </script>
+  <script>
+
+    var map = L.map('map').setView([51.454750, -2.605387], 14);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Add marker for Origin Workspace, Bristol
+    var originMarker = L.marker([51.454750, -2.605387]).addTo(map);
+
+    // Optional: Add popup text to marker
+    originMarker.bindPopup("Origin Workspace, Bristol").openPopup();
   </script>
 
 </html>
