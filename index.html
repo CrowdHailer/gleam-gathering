@@ -6,6 +6,7 @@
   <title>Gleam Gathering 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    /* Base and reset */
     html {
       box-sizing: border-box;
     }
@@ -22,6 +23,8 @@
       --brand-light: #fffbe8;
       --text-dark: #1e1e1e;
       --text-light: #fefefc;
+
+      --width-content: 960px;
     }
 
     body {
@@ -31,15 +34,8 @@
       color: var(--text-dark);
     }
 
-    header {
-      background: var(--brand-primary);
-      padding: 20px;
-      text-align: center;
-      color: var(--text-dark);
-    }
-
     main {
-      max-width: 800px;
+      max-width: var(--width-content);
       margin: 40px auto;
       padding: 0 20px;
     }
@@ -47,6 +43,78 @@
     h1,
     h2 {
       color: var(--brand-dark);
+    }
+
+    a {
+      text-decoration: none;
+      outline: none;
+    }
+
+    /* Elements */
+
+    header {
+      /* background: var(--brand-primary); */
+      max-width: var(--width-content);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 8px 20px;
+      color: var(--text-dark);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 20px;
+      /* position: sticky;
+      top: 0;
+      backdrop-filter: blur(5px);
+      background-color: #fffbe8aa; */
+    }
+
+    header> :first-child {
+      font-size: 140%;
+      font-weight: bold;
+    }
+
+
+    header nav a {
+      color: var(--text-dark);
+      margin-left: 20px;
+    }
+
+    header nav a:hover,
+    header nav a:focus {
+      text-decoration: underline;
+    }
+
+    .hero {
+      max-width: var(--width-content);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .hero img {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .speakers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .speakers > div {
+      background-color: white;
+      border: 2px solid var(--brand-primary);
+      border-radius: 8px;
+      padding: 20px;
     }
 
     .btn {
@@ -177,11 +245,23 @@
 <body>
 
   <header>
-    <h1>Gleam Gathering 2026</h1>
-    <p>The celebration of the Gleam language, the community and all things Gleamy.</p>
+    <div>Gleam Gathering 2026</div>
+    <nav>
+      <a href="#speakers">Speakers</a>
+      <a href="#">Call for Talks</a>
+      <a href="#">Venue</a>
+      <a href="#">Register</a>
+    </nav>
   </header>
+  <div class="hero">
+    <img src="logo.svg" alt="Gleam Gathering Logo">
+    <div>
+      <p>Join us for the <strong>first ever</strong> Gleam conference</p>
+      <p>A celebration of the language, the community and all things Gleamy.</p>
+      <a href="">Register</a>
+    </div>
+  </div>
 
-  <img src="logo.svg" alt="Gleam Gathering Logo" style="width: 180px; height: auto; margin: 20px auto; display: block;">
 
   <main>
     <section id="about">
@@ -192,8 +272,22 @@
         due to the volume of responses, we can confirm that GLEAM GATHERING 2026 IS A GO! We will be gathering on
         <strong> Saturday 21 February 2026 in Bristol, UK</strong>! Tickets will go on sale shortly (watch this space).
       </p>
-
-
+    </section>
+    <section id="speakers">
+      <h2>Speakers</h2>
+      <div class="speakers">
+        <div>
+          <p>Louis</p>
+          <p>Keynote</p>
+        </div>
+        <div>
+          <p>You</p>
+          <p>See our Call for talks</p>
+        </div>
+      </div>
+    
+    </section>
+    <section>
       <h2>Call for talks!</h2>
       <p> We’re now accepting talk proposals for Gleam Gathering 2026. Whether you’re an experienced speaker or new to
         presenting, we want to hear your ideas. This is your chance to contribute to the community, share knowledge, and
