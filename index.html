@@ -57,10 +57,13 @@
       outline: none;
     }
 
-    ol,ul {
+    ol,
+    ul {
       /* list-style-position: inside; */
-      padding-left: 1.5em; /* Create inset space for wrapped lines */
+      padding-left: 1.5em;
+      /* Create inset space for wrapped lines */
     }
+
     /* Elements */
 
     header {
@@ -171,14 +174,20 @@
 
     .speakers {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 5px;
+      grid-template-columns: repeat(1, 1fr);
+      /* useful for vertical separation on single column layout */
+      gap: 20px;
+    }
+
+    @media (min-width: 550px) {
+      .speakers {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (min-width: 900px) {
       .speakers {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
       }
     }
 
@@ -188,6 +197,9 @@
       border: 2px solid var(--brand-primary);
       border-radius: 20px;
       overflow: hidden;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .alt .card {
@@ -196,8 +208,10 @@
 
     .card>img {
       width: 100%;
-      height: 200px;
+      aspect-ratio: 1 / 1;
+      display: block;
       object-fit: cover;
+      object-position: top;
     }
 
     .card>p,
@@ -390,7 +404,7 @@
         due to the volume of responses, we can confirm that GLEAM GATHERING 2026 IS A GO! We will be gathering on
         <strong> Saturday 21 February 2026 in Bristol, UK</strong>!
         We are truly honoured to announce our first keynote speaker: <strong>Louis Pilfold</strong>
-        The interest forms made it clear that a key attraction would be seeing the main Gleamling in person and he has
+        The interest forms made it clear that a key attraction would be seeing the main Gleamlin in person and he has
         kindly agreed to join us.
       </p>
     </section>
@@ -411,7 +425,7 @@
           <p>Gleam Core Team</p>
           <p>Giacomo is a software developer and a functional programming enthusiast. Upon discovering Gleam he couldn’t
             help but fall in love with the language and its friendly community. He’s now a member of Gleam’s core team
-            and an active contributor to its compiler’s development.”</p>
+            and an active contributor to its compiler’s development.</p>
         </div>
         <div class="card">
           <img src="./Hayleigh_Thompson.jpg" alt="">
@@ -421,6 +435,15 @@
             packages that support it. She is an experienced Web developer and Elm engineer. More recently, Hayleigh has
             spent the last few years acting as a developer evangelist; spreading the good word about types, the BEAM,
             and Gleam to anyone with the patience to listen to her.</p>
+        </div>
+        <div class="card">
+          <img src="./Surya_Rose.webp" alt="">
+          <h3>Surya Rose</h3>
+          <p>Gleam Core Team</p>
+          <p>Hi, I'm Surya, a software developer who loves programming languages, compilers, and other interesting
+            programming problems.
+            I started writing code for the Gleam compiler well before using Gleam;
+            I've been working on Gleam for over a year now, and I love every minute of it!</p>
         </div>
         <div class="card">
           <img src="https://gleam.run/images/lucy/lucypinkbg.svg" alt="">
@@ -480,13 +503,12 @@
         We welcome talks that are:
       </p>
       <ul>
-        <li>Sounds obvious, but about Gleam. For our first Gathering, we want to be as heavily focused on Gleam as
-          possible.</li>
+        <li>Are about Gleam. For our first Gathering, we want to be as heavily focused on Gleam as possible.</li>
         <li>About Gleam in production – what’s working, what’s not, what have you discovered?</li>
         <li>Using Gleam to solve real world problems</li>
         <li>Pushing the use of Gleam to the extreme – what novel approaches have you taken?</li>
       </ul>
-      <p>
+      <!-- <p>
         What we aren’t looking for this time:
       </p>
       <ul>
@@ -495,7 +517,7 @@
         <li>Beginner demos – we absolutely welcome Gleam novices, but we will be diving into more detail in the long
           form talks. Please consider a lightning talk format if you’d love to share anything on this topic.</li>
         <li>Keynotes (we are really fortunate to already have this one sorted)</li>
-      </ul>
+      </ul> -->
 
       <h2>Formats accepted:</h2>
       <p>Talks of either:</p>
