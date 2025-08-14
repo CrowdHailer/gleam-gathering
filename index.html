@@ -40,14 +40,14 @@
       padding: 0 20px;
     }
 
-    h1,
-    h2 {
-      color: var(--brand-dark);
-    }
 
-    h3 {
+    h1,
+    h2,
+    h3,
+    p {
       margin: 0;
     }
+
 
     a {
       text-decoration: none;
@@ -335,7 +335,10 @@
       <p>Thank you so much to everyone who took the time to register their interest in the Gathering. The feedback we
         got was insightful and honest, and we will listen to it as much as possible going forward with the event. And
         due to the volume of responses, we can confirm that GLEAM GATHERING 2026 IS A GO! We will be gathering on
-        <strong> Saturday 21 February 2026 in Bristol, UK</strong>! Tickets will go on sale shortly (watch this space).
+        <strong> Saturday 21 February 2026 in Bristol, UK</strong>!
+        We are truly honoured to announce our first keynote speaker: <strong>Louis Pilfold</strong>
+        The interest forms made it clear that a key attraction would be seeing the main Gleamling in person and he has
+        kindly agreed to join us.
       </p>
     </section>
     <section id="speakers">
@@ -378,13 +381,16 @@
       <div id="map"></div>
     </section>
     <section id="call-for-talks">
-      <h2>Call for talks!</h2>
+      <h2>🎤 Call for talks</h2>
       <p> We’re now accepting talk proposals for Gleam Gathering 2026. Whether you’re an experienced speaker or new to
         presenting, we want to hear your ideas. This is your chance to contribute to the community, share knowledge, and
         inspire others. Gleam welcomes everyone and we want to ensure this is continued in the GG26.</p>
-      <p>As this is a dedicated Gleam conference, we are targeting more technical, advanced talks. However, we are also
-        going to ensure we have a section in the agenda for lightning talks, so if you think your talk would be better
-        suited to that structure, you'll have the opportunity to sign up on the day.</p>
+      <p>As this is a dedicated Gleam conference, we are targeting more technical, advanced talks. However, we want
+        <strong>everyone</strong> to feel included, whether you're an old hand with Gleam or a newcomer.
+        We will ensure that we have a section in the agenda for lightning talks, so if you think your talk would be
+        better
+        suited to that structure, you'll have the opportunity to sign up on the day.
+      </p>
 
       <h2>What We’re Looking For</h2>
       We welcome talks that are:
@@ -432,6 +438,33 @@
         <li>Event date: Saturday 21 February 2026</li>
 
       </ul>
+
+      <h2>The Venue</h2>
+      We are really excited to be hosting GG26 at Origin Workspace in the heart of Bristol. A co-working space during
+      the week, Origin was built to encourage innovation and community.
+      <strong>How do I get there?</strong>
+      Bristol is a really well connected city, with lots of opportunities to use public transport.
+      <ol>
+        <li>Bus - there are National Express buses from London to the heart of Bristol</li>
+        <li>Planes - Bristol Airport receives international flights and has great connections to the city</li>
+        <li>Train - Bristol Temple Mead is the main train station - Origin is about a 30min walk from there. There's
+          also a frequent local bus service between the station and the part of town Origin is in. </li>
+      </ol>
+      If you need any further information, please do check the Origin Workspace website for more details: <a
+        href="https://originworkspace.co.uk/contact/">https://originworkspace.co.uk/contact/</a>
+    </section>
+    <section>
+      <h2>Meet the organiser</h2>
+      <p>Better known as Crowdhailer online, I've been coding for over a decade. As the first contributor to Gleam, I've
+        always been excited about the possibilities that Gleam offered to the coding community
+        and I'm thrilled to be able to organise this event for the first time. When I am not using Gleam in production,
+        I'm working on my own language, EYG. Can't wait to see you all in Bristol.</p>
+    </section>
+    <section>
+      <h2>Sponsorship opportunities</h2>
+      <p>Bringing the community together is central to this event, and we would like to extend this to any potential
+        sponsors for the event. If your organisation, or an organisation you know of, would be interested in
+        sponsoring GG26, then please do drop us a line at gleamgathering2026@gmail.com.</p>
     </section>
 
     <section id="register" class="interest-form">
@@ -460,7 +493,16 @@
 
         <button type="submit" class="btn">Submit</button>
       </form>
-      <div id="formFeedback" style="margin-top:12px;"></div>
+    </section>
+
+    <section>
+      <h2>Ticket sales are live!</h2>
+      <p>We are so thrilled to announce that ticket sales are now live. We have listened to the feedback and we are
+        actively trying to keep the GG26 affordable for everyone - community is at the heart of this event.
+        We aren't going to do loads of tiers of entry - there'll be standard tickets and if we have any left by January,
+        then there will be some last minute tickets, which will be a bit pricier.
+        We are also keeping this first meet relatively small, so numbers are limited - our venue maxes out at 100.
+        So many reasons to make sure you buy your ticket as soon as possible :D</p>
     </section>
     <button onclick="openPopup()">Privacy Policy</button>
   </main>
@@ -611,5 +653,6 @@
     // Optional: Add popup text to marker
     originMarker.bindPopup("Origin Workspace, Bristol").openPopup();
   </script>
+
 
 </html>
