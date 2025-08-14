@@ -18,11 +18,21 @@
     }
 
     :root {
-      --brand-primary: #FAAFEE;
-      --brand-dark: #292d3e;
-      --brand-light: #fffbe8;
-      --text-dark: #1e1e1e;
-      --text-light: #fefefc;
+      --faff-pink: #ffaff3;
+      --white: #fefefc;
+      --unnamed-blue: #a6f0fc;
+      --aged-plastic-yellow: #fffbe8;
+      --unexpected-aubergine: #584355;
+      --underwater-blue: #292d3e;
+      --charcoal: #2f2f2f;
+      --black: #1e1e1e;
+      --blacker: #151515;
+
+      --brand-primary: var(--faff-pink);
+      --brand-dark: var(--underwater-blue);
+      --brand-light: var(--aged-plastic-yellow);
+      --text-dark: var(--black);
+      --text-light: var(--white);
 
       --width-content: 960px;
     }
@@ -33,13 +43,6 @@
       background: var(--brand-light);
       color: var(--text-dark);
     }
-
-    main {
-      max-width: var(--width-content);
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
 
     h1,
     h2,
@@ -101,8 +104,8 @@
       white-space: nowrap;
     }
 
-    header nav a:hover,
-    header nav a:focus {
+    a:hover,
+    a:focus {
       text-decoration: underline;
     }
 
@@ -128,6 +131,41 @@
       max-width: 60%;
     }
 
+    .hero p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    main > section {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    main>section>* {
+      margin: 0 auto;
+      max-width: var(--width-content);
+      padding: 0 20px;
+    }
+
+    section>h2,
+    section p {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    section>h2:first-child {
+      margin-top: 0;
+    }
+
+    section.alt {
+      background-color: var(--brand-primary);
+    }
+
+    section.contrast {
+      background-color: var(--unexpected-aubergine);
+      color: var(--brand-light);
+    }
+
     .speakers {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -147,6 +185,9 @@
       border: 2px solid var(--brand-primary);
       border-radius: 20px;
       overflow: hidden;
+    }
+    .alt .card {
+      border: 2px solid var(--brand-light);
     }
 
     .card>img {
@@ -168,6 +209,7 @@
     .button {
       padding: 4px;
       border-radius: 12px;
+      display: inline-block;
     }
 
     .button.impact {
@@ -302,6 +344,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://js.tito.io/v2" async></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script defer data-domain="gleamgathering.com" src="https://plausible.io/js/script.js"></script>
@@ -315,7 +358,8 @@
       <a href="#speakers" class="button">Speakers</a>
       <a href="#venue" class="button">Venue</a>
       <a href="#call-for-talks" class="button">Call for Talks</a>
-      <a href="#" class="button impact">Register</a>
+      <a href="#sponsor" class="button">Sponsor</a>
+      <a href="#register" class="button impact">Buy tickets</a>
     </nav>
   </header>
   <div class="hero">
@@ -323,10 +367,14 @@
     <div>
       <p>Join us for the <strong>first ever</strong> Gleam conference</p>
       <p>A celebration of the language, the community and all things Gleamy.</p>
-      <a href="" class="button impact">Register</a>
+      <p>
+        <strong>
+          21 February 2026 - Bristol, UK
+        </strong>
+      </p>
+      <a href="#register" class="button impact">Buy tickets</a>
     </div>
   </div>
-
 
   <main>
     <section id="about">
@@ -341,7 +389,7 @@
         kindly agreed to join us.
       </p>
     </section>
-    <section id="speakers">
+    <section id="speakers" class="">
       <h2>Speakers</h2>
       <div class="speakers">
         <div class="card">
@@ -360,7 +408,7 @@
             help but fall in love with the language and its friendly community. He’s now a member of Gleam’s core team
             and an active contributor to its compiler’s development.”</p>
         </div>
-        <div class="card">
+        <!-- <div class="card">
           <img src="./Hayleigh_Thompson.jpg" alt="">
           <h3>Hayleigh Thompson</h3>
           <p>Gleam Core Team</p>
@@ -368,19 +416,56 @@
             packages that support it. She is an experienced Web developer and Elm engineer. More recently, Hayleigh has
             spent the last few years acting as a developer evangelist; spreading the good word about types, the BEAM,
             and Gleam to anyone with the patience to listen to her.</p>
-        </div>
+        </div> -->
         <div class="card">
           <img src="https://gleam.run/images/lucy/lucypinkbg.svg" alt="">
-          <p>You</p>
-          <p>See our Call for talks</p>
+          <h3>You?</h3>
+          <p>See our <a href="#call-for-talks">call for talks</a></p>
         </div>
       </div>
     </section>
     <section id="venue">
       <h2>Venue</h2>
+      <p>
+        We are really excited to be hosting GG26 at Origin Workspace in the heart of Bristol. A co-working space during
+        the week, Origin was built to encourage innovation and community.
+      </p>
+      <h3>How do I get there?</h3>
+      <p>
+        Bristol is a really well connected city, with lots of opportunities to use public transport.
+      </p>
+      <div>
+        <ol>
+          <li>Bus - there are National Express buses from London to the heart of Bristol</li>
+          <li>Planes - Bristol Airport receives international flights and has great connections to the city</li>
+          <li>Train - Bristol Temple Mead is the main train station - Origin is about a 30min walk from there. There's
+            also a frequent local bus service between the station and the part of town Origin is in. </li>
+        </ol>
+      </div>
+      <p>
+        If you need any further information, please do check the Origin Workspace website for more details: <a
+          href="https://originworkspace.co.uk/contact/">https://originworkspace.co.uk/contact/</a>
+      </p>
       <div id="map"></div>
     </section>
-    <section id="call-for-talks">
+    <section id="register" class="alt">
+      <h2>Buy tickets</h2>
+      <p>
+        We are just finalising details and tickets will be available soon.
+      </p>
+      <!-- <h2>Ticket sales are live!</h2>
+      <p>We are so thrilled to announce that ticket sales are now live. We have listened to the feedback and we are
+        actively trying to keep the GG26 affordable for everyone - community is at the heart of this event.
+        We aren't going to do loads of tiers of entry - there'll be standard tickets and if we have any left by January,
+        then there will be some last minute tickets, which will be a bit pricier.
+        We are also keeping this first meet relatively small, so numbers are limited - our venue maxes out at 100.
+        So many reasons to make sure you buy your ticket as soon as possible :D</p>
+     -->
+      <div>
+        <tito-widget  event="eyg/gleam-gathering-2026">Buy Tickets</tito-widget>
+      </div>
+    </section>
+    <section id="call-for-talks" class="contrast">
       <h2>🎤 Call for talks</h2>
       <p> We’re now accepting talk proposals for Gleam Gathering 2026. Whether you’re an experienced speaker or new to
         presenting, we want to hear your ideas. This is your chance to contribute to the community, share knowledge, and
@@ -393,7 +478,10 @@
       </p>
 
       <h2>What We’re Looking For</h2>
-      We welcome talks that are:
+      <p>
+
+        We welcome talks that are:
+      </p>
       <ul>
         <li>Sounds obvious, but about Gleam. For our first Gathering, we want to be as heavily focused on Gleam as
           possible.</li>
@@ -401,8 +489,9 @@
         <li>Using Gleam to solve real world problems</li>
         <li>Pushing the use of Gleam to the extreme – what novel approaches have you taken?</li>
       </ul>
-
-      What we aren’t looking for this time:
+      <p>
+        What we aren’t looking for this time:
+      </p>
       <ul>
         <li>Product/language update (we will have this covered, and we want your talks to demonstrate real innovation
           within the community)</li>
@@ -419,7 +508,9 @@
       </ol>
 
       <h2>Organisers' Responsibilities</h2>
-      We’re committed to supporting every speaker who submits a proposal. Here’s what you can expect from us:
+      <p>
+        We’re committed to supporting every speaker who submits a proposal. Here’s what you can expect from us:
+      </p>
       <ul>
         <li>Fair Review Process: All submissions will be reviewed by an anonymous committee of experienced speakers and
           Gleam users.</li>
@@ -438,73 +529,54 @@
         <li>Event date: Saturday 21 February 2026</li>
 
       </ul>
+      <h2>Submit your talk proposal</h2>
+      <div class="interest-form">
+        <form name="talk-submission" data-netlify="true">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required>
 
-      <h2>The Venue</h2>
-      We are really excited to be hosting GG26 at Origin Workspace in the heart of Bristol. A co-working space during
-      the week, Origin was built to encourage innovation and community.
-      <strong>How do I get there?</strong>
-      Bristol is a really well connected city, with lots of opportunities to use public transport.
-      <ol>
-        <li>Bus - there are National Express buses from London to the heart of Bristol</li>
-        <li>Planes - Bristol Airport receives international flights and has great connections to the city</li>
-        <li>Train - Bristol Temple Mead is the main train station - Origin is about a 30min walk from there. There's
-          also a frequent local bus service between the station and the part of town Origin is in. </li>
-      </ol>
-      If you need any further information, please do check the Origin Workspace website for more details: <a
-        href="https://originworkspace.co.uk/contact/">https://originworkspace.co.uk/contact/</a>
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="Title">Title *</label>
+          <input id="Title" name="Title" type="text" required>
+
+          <label for="message">Overview of topic *</label>
+          <textarea id="message" name="message" rows="10" required></textarea>
+
+          <label for="talk-type">Choose your talk length:</label><br><br>
+          <select name="talk-type" id="talk-type" required>
+            <option value="">--Please choose an option--</option>
+            <option value="30min">30 mins</option>
+            <option value="45min">45 mins</option>
+            <option value="Either">I can do 30 or 45</option>
+          </select><br><br>
+
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
     </section>
     <section>
       <h2>Meet the organiser</h2>
-      <p>Better known as Crowdhailer online, I've been coding for over a decade. As the first contributor to Gleam, I've
+      <p>Better known as Crowdhailer online, I've been coding for over a decade. As an early contributor to Gleam, I've
         always been excited about the possibilities that Gleam offered to the coding community
         and I'm thrilled to be able to organise this event for the first time. When I am not using Gleam in production,
         I'm working on my own language, EYG. Can't wait to see you all in Bristol.</p>
     </section>
-    <section>
+    <section id="sponsor">
       <h2>Sponsorship opportunities</h2>
       <p>Bringing the community together is central to this event, and we would like to extend this to any potential
         sponsors for the event. If your organisation, or an organisation you know of, would be interested in
         sponsoring GG26, then please do drop us a line at gleamgathering2026@gmail.com.</p>
     </section>
 
-    <section id="register" class="interest-form">
-      <h2>Submit your talk proposal</h2>
-      <form name="talk-submission" data-netlify="true">
-        <label for="name">Name *</label>
-        <input id="name" name="name" type="text" required>
-
-        <label for="email">Email *</label>
-        <input id="email" name="email" type="email" required>
-
-        <label for="Title">Title *</label>
-        <input id="Title" name="Title" type="text" required>
-
-        <label for="message">Overview of topic *</label>
-        <textarea id="message" name="message" rows="10" required></textarea>
-
-        <label for="talk-type">Choose your talk length:</label><br><br>
-        <select name="talk-type" id="talk-type" required>
-          <option value="">--Please choose an option--</option>
-          <option value="30min">30 mins</option>
-          <option value="45min">45 mins</option>
-          <option value="Either">I can do 30 or 45</option>
-        </select><br><br>
-
-
-        <button type="submit" class="btn">Submit</button>
-      </form>
-    </section>
-
     <section>
-      <h2>Ticket sales are live!</h2>
-      <p>We are so thrilled to announce that ticket sales are now live. We have listened to the feedback and we are
-        actively trying to keep the GG26 affordable for everyone - community is at the heart of this event.
-        We aren't going to do loads of tiers of entry - there'll be standard tickets and if we have any left by January,
-        then there will be some last minute tickets, which will be a bit pricier.
-        We are also keeping this first meet relatively small, so numbers are limited - our venue maxes out at 100.
-        So many reasons to make sure you buy your ticket as soon as possible :D</p>
+      <div>
+        <button onclick="openPopup()">Privacy Policy</button>
+      </div>
     </section>
-    <button onclick="openPopup()">Privacy Policy</button>
+
   </main>
 
   <div id="privacy-policy" class="popup-overlay">
