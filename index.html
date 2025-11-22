@@ -224,6 +224,61 @@
       height: 400px;
     }
 
+    .schedule {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+
+      &>img {
+        max-width: 60px;
+      }
+
+      &>h2 {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .schedule>.time {
+      width: 120px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid var(--white);
+      color: var(--white);
+      border-radius: 12px;
+      /* padding: 6px; */
+      font-weight: bold;
+
+    }
+
+    .schedule>.activity {
+      flex-grow: 1;
+      flex-shrink: 1;
+      background-color: var(--white);
+      border-radius: 12px;
+      padding: 10px;
+
+      &>h4 {
+        margin: 0;
+        font-weight: normal;
+        font-style: italic
+      }
+    }
+
+    .break {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 150%;
+      color: var(--underwater-blue);
+    }
+
     .button {
       padding: 4px;
       border-radius: 12px;
@@ -478,6 +533,77 @@
           <p>Speaker</p>
           <p><strong>Talk: </strong>Inside the Lustre runtime</p>
         </div>
+      </div>
+    </section>
+    <section id="schedule" class="alt">
+      <div class="schedule">
+        <img src="https://gleam.run/images/lucy/superlucy.svg" alt="">
+        <h2>Schedule</h2>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          9:00 - 9:25
+        </span>
+        <span class="activity">
+          <h3>Welcome</h3>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          9:00 - 9:25
+        </span>
+        <span class="activity">
+          <h3>Inside the Lustre runtime</h3>
+          <h4>Yoshie Reusch</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim cumque sequi repellat itaque quos
+            praesentium dolorem. Beatae voluptas praesentium ab, dolorum non dicta sint ullam atque debitis labore sunt
+            cum.</p>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          9:00 - 9:25
+        </span>
+        <span class="activity">
+          <h3>Riding the Sour Train: Building surtoget.no with Gleam</h3>
+          <h4>John Mikael Lindbakk</h4>
+          <p>This talk is not super technical, but rather it is a story about building surtoget.no (albeit a simple one)
+            with Gleam and maintaining it in production, and the small things I discovered throughout its lifecycle (so
+            far).</p>
+          <p>The talk is also about how we can use programming to highlight problems we encounter in society (even these
+            small, very specific ones like this one). With the overall message being that Gleam is good, it is stable
+            and that we can use our craft for good.</p>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          9:00 - 9:25
+        </span>
+        <span class="activity">
+          <h3>Inside the Lustre runtime</h3>
+          <h4>Yoshie Reusch</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim cumque sequi repellat itaque quos
+            praesentium dolorem. Beatae voluptas praesentium ab, dolorum non dicta sint ullam atque debitis labore sunt
+            cum.</p>
+        </span>
+      </div>
+      <!-- <div class="break">
+        coffee
+      </div> -->
+      <div class="schedule">
+        <span class="time">
+          9:00 - 9:25
+        </span>
+        <span class="activity">
+          <h3>Riding the Sour Train: Building surtoget.no with Gleam</h3>
+          <h4>John Mikael Lindbakk</h4>
+          <p>This talk is not super technical, but rather it is a story about building surtoget.no (albeit a simple one)
+            with Gleam and maintaining it in production, and the small things I discovered throughout its lifecycle (so
+            far).</p>
+          <p>The talk is also about how we can use programming to highlight problems we encounter in society (even these
+            small, very specific ones like this one). With the overall message being that Gleam is good, it is stable
+            and that we can use our craft for good.</p>
+        </span>
       </div>
     </section>
     <section id="venue">
