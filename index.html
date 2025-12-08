@@ -224,6 +224,61 @@
       height: 400px;
     }
 
+    .schedule {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+
+      &>img {
+        max-width: 60px;
+      }
+
+      &>h2 {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .schedule>.time {
+      width: 120px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid var(--white);
+      color: var(--white);
+      border-radius: 12px;
+      /* padding: 6px; */
+      font-weight: bold;
+
+    }
+
+    .schedule>.activity {
+      flex-grow: 1;
+      flex-shrink: 1;
+      background-color: var(--white);
+      border-radius: 12px;
+      padding: 10px;
+
+      &>h4 {
+        margin: 0;
+        font-weight: normal;
+        font-style: italic
+      }
+    }
+
+    .break {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 150%;
+      color: var(--underwater-blue);
+    }
+
     .button {
       padding: 4px;
       border-radius: 12px;
@@ -478,6 +533,197 @@
           <p>Speaker</p>
           <p><strong>Talk: </strong>Inside the Lustre runtime</p>
         </div>
+      </div>
+    </section>
+    <section id="schedule" class="alt">
+      <div class="schedule">
+        <img src="https://gleam.run/images/lucy/superlucy.svg" alt="">
+        <h2>Schedule</h2>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          9:20 - 9:45
+        </span>
+        <span class="activity">
+          <h3>Doors open</h3>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          9:45 - 10:00
+        </span>
+        <span class="activity">
+          <h3>Welcome</h3>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          10:00 - 10:45
+        </span>
+        <span class="activity">
+          <h3>Core Team Panel</h3>
+          <h4>Core Team</h4>
+          <p>Get to know the core team.</p>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          10:50 - 11:20
+        </span>
+        <span class="activity">
+          <h3>Riding the Sour Train: Building surtoget.no with Gleam</h3>
+          <h4>John Mikael Lindbakk</h4>
+          <p>This talk is not super technical, but rather it is a story about building surtoget.no (albeit a simple one)
+            with Gleam and maintaining it in production, and the small things I discovered throughout its lifecycle (so
+            far).</p>
+          <p>The talk is also about how we can use programming to highlight problems we encounter in society (even these
+            small, very specific ones like this one). With the overall message being that Gleam is good, it is stable
+            and that we can use our craft for good.</p>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          11:20 - 11:45
+        </span>
+        <span class="activity">
+          <h3>Coffee break</h3>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          11:50 - 12:20
+        </span>
+        <span class="activity">
+          <h3>10,000 Lines Later: When a Tool Became a Compiler (and I Became a Gleamlin)</h3>
+          <h4>Rob Durst</h4>
+          <p>
+            Many compilers are written in Haskell or OCaml to lean on type-driven development and the natural function
+            composition that compilers demand. Fresh off listening to Type Theory for All, I was introduced to Gleam,
+            which, it turns out,
+            struck the perfect balance I had been looking for!
+          </p>
+          <p>
+            10,000 lines later, here are some of the key things I've learned:
+          </p>
+          <ul>
+            <li>Micro-patterns: how to write Gleam like a Gleamlin instead of fighting my own language biases</li>
+            <li>Ecosystem navigation: what it feels like to work in an enthusiastic but still maturing package landscape
+            </li>
+            <li>Productionization quirks: what CI/CD, testing, and versioning look like in Gleam</li>
+            <li>Approachability: Gleam has just enough functional programming and type safety to feel like a “typical
+              compiler-building language,” but without the intimidation factor.</li>
+          </ul>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          12:25 - 13:00
+        </span>
+        <span class="activity">
+          <h3>Keynote</h3>
+          <h4>Louis Pilfold</h4>
+          <p>TBA</p>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          13:00 - 14:15
+        </span>
+        <span class="activity">
+          <h3>Lunch</h3>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          14:15 - 14:45
+        </span>
+        <span class="activity">
+          <h3>How I used Lustre to build the best Eve Online arbitrage tool</h3>
+          <h4>Guillaume Heu</h4>
+          <p>This talk will discuss building the best current Eve Online system-to-system arbitration tool.</p>
+          <p>It calls the Eve Online API to fetch available buy and sell orders, computing possible trades, grossly
+            simplifying a serious dynamic programming problem (which trades to pick based on available cargo, funds and
+            trades profitability) and finally displaying the close-to-optimal trades in the form of several "multibuys"
+            which allow for quickly buying all the items from the starting station.
+          </p>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          14:50 - 15:20
+        </span>
+        <span class="activity">
+          <h3>Could WebAssembly be in Gleam's future?</h3>
+          <h4>Danielle Maywood</h4>
+          <p>This talk will cover what a potential future could look like where Gleam is compiled to WebAssembly, and
+            what would be needed to make that happen.</p>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          15:25 - 16:00
+        </span>
+        <span class="activity">
+          <h3>Lightning talks</h3>
+          <h4>You?</h4>
+          <p>TBA.</p>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          16:00 - 16:30
+        </span>
+        <span class="activity">
+          <h3>Coffee</h3>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          16:30 - 17:00
+        </span>
+        <span class="activity">
+          <h3>Inside the Lustre runtime</h3>
+          <h4>Yoshie Reusch</h4>
+          <p>Ever wondered how Lustre really works under the hood?
+          </p>
+          <p>In this session I'll give an overview of how a Lustre app runs, before diving deep into the internals of
+            the rendering process. We'll explore when and how the runtime updates the screen, what a virtual DOM is and
+            how it works, and how Lustre makes purely functional UI updates not only possible, but surprisingly fast as
+            well.
+          </p>
+          <p>
+            We'll examine how Lustre's different APIs each affect the rendering pipeline, and the challenges we faced
+            when adding server-components into the mix. I'll walk through the reconciliation algorithm, diff strategies
+            and clever tricks that make it all work. You'll get insider knowledge from one of Lustre's authors on when
+            to reach for each API and how they work internally.
+          </p>
+          <p>
+            By the end, you'll have a solid mental model of Lustre's architecture and some practical tricks we've
+            learned along the way. Also, there will be trees.</p>
+          </p>
+        </span>
+      </div>
+      <div class="schedule">
+        <span class="time">
+          17:05 - 17:35
+        </span>
+        <span class="activity">
+          <h3>Optimising the hell out of Gleam</h3>
+          <h4>Surya Rose</h4>
+          <p>This talk is about the chess bot I made for IHH's Gleam chess tournament, and how I optimised it to be as
+            fast and powerful as possible.
+            I will cover how I optimised code to be faster, as well as various domain-specific techniques I used in my
+            bot.
+          </p>
+        </span>
+      </div>
+      <div class="schedule reverse">
+        <span class="time">
+          17:35 - 18:00
+        </span>
+        <span class="activity">
+          <h3>Closing remarks</h3>
+        </span>
       </div>
     </section>
     <section id="venue">
