@@ -429,11 +429,8 @@
   <header>
     <div>Gleam Gathering</div>
     <nav>
-      <!-- <a href="#speakers" class="button">Speakers</a>
-      <a href="#venue" class="button">Venue</a>
-      <a href="#call-for-talks" class="button">Call for Talks</a>
       <a href="#sponsor" class="button">Sponsor</a>
-      <a href="#register" class="button impact">Buy tickets</a> -->
+      <a href="#register" class="button impact">Register interest</a>
     </nav>
   </header>
   <div class="hero">
@@ -442,6 +439,7 @@
       <p>Wow. The <strong>first ever</strong> Gleam conference was everything we hoped for and so much more. A true celebration of the language and above all the community.</p>
       <p> Thank you to everyone who made it possible. Whether you were a superb speaker, a lightning talk legend or an awesome attendee, none of it would have been possible without you. Take a bow.
       </p>
+      <a href="#register" class="button impact">Register interest for 2027</a>
     </div>
   </div>
 
@@ -451,6 +449,27 @@
       <p> One of the FAQs on the day was "Will you do this again?" We didn't commit. Because it was a lot to process. But we have now had plenty of time to look at
         the feedback and we are so excited to announce that, if you want it, we are absolutely bringing the Gathering back in 2027. Watch this space, dear Gleamlins...
       </p>
+    </section>
+    <section id="register" class="alt">
+      <div class="interest-form">
+        <h2>Register Your Interest</h2>
+        <p>Think this sounds like something you want to be a part of? Register your interest and we will keep you updated as plans for Gleam Gathering 2027 take shape.</p>
+        <form name="register-interest" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="register-interest">
+
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">A quick note for us, anything you'd like to see?</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="formFeedback" style="margin-top:12px;"></div>
+      </div>
     </section>
     <section id="speakers" class="">
       <h2>Class of 2026: Speakers & Panellists</h2>
@@ -658,17 +677,16 @@
   </script>
   <script>
 
-    var map = L.map('map').setView([51.454750, -2.605387], 14);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+    if (document.getElementById('map') && window.L) {
+      var map = L.map('map').setView([51.454750, -2.605387], 14);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
 
-    // Add marker for Origin Workspace, Bristol
-    var originMarker = L.marker([51.454750, -2.605387]).addTo(map);
-
-    // Optional: Add popup text to marker
-    originMarker.bindPopup("Origin Workspace, Bristol").openPopup();
+      var originMarker = L.marker([51.454750, -2.605387]).addTo(map);
+      originMarker.bindPopup("Origin Workspace, Bristol").openPopup();
+    }
   </script>
 
 
