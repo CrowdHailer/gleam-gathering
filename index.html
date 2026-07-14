@@ -121,9 +121,10 @@
       margin-left: auto;
       margin-right: auto;
       padding: 20px 20px;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
       align-items: center;
-      justify-content: space-around;
+      justify-items: center;
       gap: 20px;
       font-size: 24px;
     }
@@ -132,10 +133,6 @@
       width: 180px;
       height: auto;
       display: block;
-    }
-
-    .hero>* {
-      max-width: 60%;
     }
 
     .hero p {
@@ -436,18 +433,19 @@
   <div class="hero">
     <img src="logo.svg" alt="Gleam Gathering Logo">
     <div>
-      <p>Wow. The <strong>first ever</strong> Gleam conference was everything we hoped for and so much more. A true celebration of the language and above all the community.</p>
-      <p> Thank you to everyone who made it possible. Whether you were a superb speaker, a lightning talk legend or an awesome attendee, none of it would have been possible without you. Take a bow.
+      <p>
+        The next Gleam Gathering will be in London on the <strong>27th of February 2027</strong>. Venue details coming soon.
       </p>
+      
       <a href="#register" class="button impact">Register interest for 2027</a>
     </div>
   </div>
 
   <main>
     <section id="about">
-      <h2>What's next?</h2>
-      <p> One of the FAQs on the day was "Will you do this again?" We didn't commit. Because it was a lot to process. But we have now had plenty of time to look at
-        the feedback and we are so excited to announce that, if you want it, we are absolutely bringing the Gathering back in 2027. Watch this space, dear Gleamlins...
+      <h2>Thank you for 2026</h2>
+      <p>Wow. The <strong>first ever</strong> Gleam conference was everything we hoped for and so much more. A true celebration of the language and above all the community.</p>
+      <p> Thank you to everyone who made it possible. Whether you were a superb speaker, a lightning talk legend or an awesome attendee, none of it would have been possible without you. Take a bow.
       </p>
     </section>
     <section id="register" class="alt">
