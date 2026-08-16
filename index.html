@@ -427,7 +427,7 @@
     <div>Gleam Gathering</div>
     <nav>
       <a href="#sponsor" class="button">Sponsor</a>
-      <a href="#register" class="button impact">Register interest</a>
+      <a href="#register" class="button impact">Buy tickets</a>
     </nav>
   </header>
   <div class="hero">
@@ -437,7 +437,7 @@
         The next Gleam Gathering will be in London on the <strong>27th of February 2027</strong>. Venue details coming soon.
       </p>
       
-      <a href="#register" class="button impact">Register interest for 2027</a>
+      <a href="#register" class="button impact">Buy tickets for 2027</a>
     </div>
   </div>
 
@@ -449,25 +449,11 @@
       </p>
     </section>
     <section id="register" class="alt">
-      <div class="interest-form">
-        <h2>Register Your Interest</h2>
-        <p>Think this sounds like something you want to be a part of? Register your interest and we will keep you updated as plans for Gleam Gathering 2027 take shape.</p>
-        <form name="register-interest" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="register-interest">
-
-          <label for="name">Name *</label>
-          <input id="name" name="name" type="text" required>
-
-          <label for="email">Email *</label>
-          <input id="email" name="email" type="email" required>
-
-          <label for="message">A quick note for us, anything you'd like to see?</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-
-          <button type="submit" class="btn">Submit</button>
-        </form>
-        <div id="formFeedback" style="margin-top:12px;"></div>
+      <h2>Buy tickets</h2>
+      <div>
+        <tito-widget event="eyg/gleam-gathering-2027">Buy Tickets</tito-widget>
       </div>
+      <p>Tickets are available now. If you can't see the option to buy a ticket, please check your ad blocker.</p>
     </section>
     <section id="speakers" class="">
       <h2>Class of 2026: Speakers & Panellists</h2>
