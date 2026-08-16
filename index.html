@@ -424,8 +424,11 @@
 <body>
 
   <header>
-    <div>Gleam Gathering</div>
+    <div>Gleam Gathering 2027</div>
     <nav>
+      <a href="#speakers" class="button">Speakers</a>
+      <a href="#venue" class="button">Venue</a>
+      <a href="#call-for-talks" class="button">Call for Talks</a>
       <a href="#sponsor" class="button">Sponsor</a>
       <a href="#register" class="button impact">Buy tickets</a>
     </nav>
@@ -434,79 +437,162 @@
     <img src="logo.svg" alt="Gleam Gathering Logo">
     <div>
       <p>
-        The next Gleam Gathering will be in London on the <strong>27th of February 2027</strong>. Venue details coming soon.
+        The next Gleam Gathering will be:
       </p>
-      
-      <a href="#register" class="button impact">Buy tickets for 2027</a>
+      <p>
+        <strong>27th of February 2027 - London, UK</strong>
+      </p>
+      <a href="#register" class="button impact">Buy tickets</a>
     </div>
   </div>
 
   <main>
     <section id="about">
-      <h2>Thank you for 2026</h2>
-      <p>Wow. The <strong>first ever</strong> Gleam conference was everything we hoped for and so much more. A true celebration of the language and above all the community.</p>
-      <p> Thank you to everyone who made it possible. Whether you were a superb speaker, a lightning talk legend or an awesome attendee, none of it would have been possible without you. Take a bow.
+  
+
+      <p><strong>The Gathering is back and in London.</strong></p>
+      <p>
+
+        We'll have an:
       </p>
+      <ul>
+        <li>Exciting schedule of talks from members of the friendliest community in programming.</li>
+        <li>Lunch, coffee, tea and snacks and <strong>stickers</strong>.</li>
+        <li>Plenty of time to mingle in the hallway track.</li>
+      </ul>
+      
+      <p>
+        Make a weekend of it:
+      </p>
+      <!-- We are expanding the format this year- there will be a hackathon on the Sunday. -->
+      <ul>
+        <li><strong>Friday:</strong> Get to know the community, we will reserve a space for the evening where you can
+          buy a beverage and chat.</li>
+        <li><strong>Saturday:</strong> The main event.</li>
+        <li><strong>Sunday:</strong> Chill get together, we're ironing out the details on a space to hack.</li>
+      </ul>
+    </section>
+    <section id="speakers" class="">
+      <h2>Speakers & Panellists</h2>
+      <div class="speakers">
+        <div class="card">
+          <img src="./Louis-Pilfold.jpg" alt="">
+          <h3>Louis Pilfold</h3>
+          <p>Creator of the Gleam Language</p>
+        </div>
+        <div class="card">
+          <img src="https://gleam.run/images/lucy/lucypinkbg.svg" alt="">
+          <h3>You?</h3>
+          <p>See our <a href="#call-for-talks">call for talks</a></p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Venue</h2>
+      <p>The 2027 event will be in the center of London at dedicated event space 44 Hallam St.</p>
+      <p>Visit their <a href="https://www.cavendishvenues.co.uk/venues/44-hallam-street#direction">directions page</a>
+        for detailed information on getting there.</p>
+      <div id="map"></div>
     </section>
     <section id="register" class="alt">
       <h2>Buy tickets</h2>
       <div>
         <tito-widget event="eyg/gleam-gathering-2027">Buy Tickets</tito-widget>
       </div>
-      <p>Tickets are available now. If you can't see the option to buy a ticket, please check your ad blocker.</p>
+      <p>If you don't see any ticket options, you can go <a href="https://ti.to/eyg/gleam-gathering-2027">here</a>.
+        We've had reports of it failing to load. </p>
     </section>
-    <section id="speakers" class="">
-      <h2>Class of 2026: Speakers & Panellists</h2>
-      <div class="speakers">
-        <div class="card">
-          <img src="./Louis-Pilfold.jpg" alt="">
-          <h3>Louis Pilfold</h3>
-          <p>Creator of the Gleam Language</p>
-          </div>
-        <div class="card">
-          <img src="./Giacomo_Cavalieri.jpg" alt="">
-          <h3>Giacomo Cavalieri</h3>
-          <p>Gleam Core Team</p>
-          </div>
-        <div class="card">
-          <img src="./Hayleigh_Thompson.jpg" alt="">
-          <h3>Hayleigh Thompson</h3>
-          <p>Gleam Core Team and author of Lustre</p>
-          <p><strong>Panel member: </strong>Chat with Gleam core team</p>
-          </div>
-        <div class="card">
-          <img src="./Surya_Rose.webp" alt="">
-          <h3>Surya Rose</h3>
-          <p>Gleam Core Team</p>      
-        </div>
-        <div class="card">
-          <img src="./Danielle_Maywood.jpg" alt="">
-          <h3>Danielle Maywood</h3>
-          <p>Speaker</p>
-        </div>
-        <div class="card">
-          <img src="./Guillaume_Heu.png" alt="">
-          <h3>Guillaume Heu</h3>
-          <p>Speaker</p>
-        </div>
-        <div class="card">
-          <img src="./John_Mikael_Lindbakk.png" alt="">
-          <h3>John Mikael Lindbakk</h3>
-          <p>Speaker</p>
-        </div>
-        <div class="card">
-          <img src="./Robert_Durst.png" alt="">
-          <h3>Robert Durst</h3>
-          <p>Speaker</p>
-        </div>
-        <div class="card">
-          <img src="./Rebecca_Reusch.jpg" alt="">
-          <h3>Rebecca Reusch</h3>
-          <p>Speaker</p>
-        </div>
+    <section id="call-for-talks" class="contrast">
+      <h2>🎤 Call for talks</h2>
+      <p> We’re now accepting talk proposals for Gleam Gathering 2027. Whether you’re an experienced speaker or new to
+        presenting, we want to hear your ideas. This is your chance to contribute to the community, share knowledge, and
+        inspire others. Gleam welcomes everyone and we want to ensure this is continued in the GG27.</p>
+      <p>As this is a dedicated Gleam conference, we are targeting more technical, advanced talks. However, we want
+        <strong>everyone</strong> to feel included, whether you're an old hand with Gleam or a newcomer.
+        We will ensure that we have a section in the agenda for lightning talks, so if you think your talk would be
+        better
+        suited to that structure, you'll have the opportunity to sign up on the day.
+      </p>
+
+      <h2>What We’re Looking For</h2>
+      <p>
+
+        We welcome talks that are:
+      </p>
+      <ul>
+        <li>Sounds obvious, but about Gleam.</li>
+        <li>About Gleam in production – what’s working, what’s not, what have you discovered?</li>
+        <li>Using Gleam to solve real world problems</li>
+        <li>Pushing the use of Gleam to the extreme – what novel approaches have you taken?</li>
+      </ul>
+      <p>
+        What we aren’t looking for this time:
+      </p>
+      <ul>
+        <li>Product/language update (we will have this covered, and we want your talks to demonstrate real innovation
+          within the community)</li>
+        <li>Beginner demos – we absolutely welcome Gleam novices, but we will be diving into more detail in the long
+          form talks. Please consider a lightning talk format if you’d love to share anything on this topic.</li>
+        <li>Keynotes (we are really fortunate to already have this one sorted)</li>
+      </ul>
+
+      <h2>Formats accepted:</h2>
+      <p>Talks of either:</p>
+      <ol>
+        <li>30mins (20-25 min presentation with 5-10 min Q&A session)</li>
+        <li>45mins (30-35 min presentation with 10-15 min Q&A session)</li>
+      </ol>
+
+      <h2>Organisers' Responsibilities</h2>
+      <p>
+        We’re committed to supporting every speaker who submits a proposal. Here’s what you can expect from us:
+      </p>
+      <ul>
+        <li>Fair Review Process: All submissions will be reviewed by an anonymous committee of experienced speakers and
+          Gleam users.</li>
+        <li>Clear Communication: You’ll hear back from us whether your talk is accepted or not.</li>
+        <li>Respect for Your Work: Your content remains your intellectual property. However, if you are selected as a
+          speaker, we will be recording all sessions and making them available after the event.</li>
+      </ul>
+      <h2>Key Dates</h2>
+      <ul>
+
+        <li>Deadline for submissions: Midnight UK time, 14 October 2026</li>
+
+        <li>Notifications sent: 01 November 2026</li>
+
+        <li>Event date: Saturday 27 February 2027</li>
+
+      </ul>
+      <h2>Submit your talk proposal</h2>
+      <div class="interest-form">
+        <form name="talk-submission" data-netlify="true">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="Title">Title *</label>
+          <input id="Title" name="Title" type="text" required>
+
+          <label for="message">Overview of topic *</label>
+          <textarea id="message" name="message" rows="10" required></textarea>
+
+          <label for="talk-type">Choose your talk length:</label><br><br>
+          <select name="talk-type" id="talk-type" required>
+            <option value="">--Please choose an option--</option>
+            <option value="30min">30 mins</option>
+            <option value="45min">45 mins</option>
+            <option value="Either">I can do 30 or 45</option>
+          </select><br><br>
+
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
       </div>
     </section>
-     <section id="organiser">     
+    <section id="organiser">
       <h2>Meet the organiser</h2>
       <p>Better known as Crowdhailer online, I've been coding for over a decade. As an early contributor to Gleam, I've
         always been excited about the possibilities that Gleam offered to the coding community.
@@ -662,14 +748,14 @@
   <script>
 
     if (document.getElementById('map') && window.L) {
-      var map = L.map('map').setView([51.454750, -2.605387], 14);
+      var map = L.map('map').setView([51.52074530917813, -0.1435250041256218], 14);
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(map);
 
-      var originMarker = L.marker([51.454750, -2.605387]).addTo(map);
-      originMarker.bindPopup("Origin Workspace, Bristol").openPopup();
+      var originMarker = L.marker([51.52074530917813, -0.1435250041256218]).addTo(map);
+      originMarker.bindPopup("44 Hallam St").openPopup();
     }
   </script>
 
