@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* branding */
+      --faff-pink: #ffaff3;
+      --white: #fefefc;
+      --unnamed-blue: #a6f0fc;
+      --aged-plastic-yellow: #fffbe8;
+      --unexpected-aubergine: #584355;
+      --underwater-blue: #292d3e;
+      --charcoal: #2f2f2f;
+      --black: #1e1e1e;
+      --blacker: #151515;
+
+      /* non-standard */
+      --burgandy: #6d5d6e
+    }
+
+    body {
+      font-family: 'Fredoka', cursive, sans-serif;
+      background: var(--gleam-dark);
+      /* overflow: hidden;
+      width: 100vw;
+      height: 100vh; */
+    }
+
+    svg {
+      height: 1920px
+    }
+
+    .star {
+      --star-features: transparent;
+
+      &.pink {
+        --star-fill: var(--faff-pink);
+        --star-border: var(--faff-pink);
+      }
+
+      &.yellow {
+        --star-fill: var(--aged-plastic-yellow);
+        --star-border: var(--aged-plastic-yellow);
+      }
+
+      &.white {
+        --star-fill: var(--white);
+        --star-border: var(--white);
+      }
+      &.face {
+        --star-features: var(--blacker)
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg class="starfield-container" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="lucy-star" viewBox="0 0 2105 2016">
+        <path
+          d="M842.026 129.177C870.114 49.5833 974.531 31.1719 1028.15 96.3575L1309.17 438.02C1343.94 480.296 1395.4 505.347 1450.14 506.68L1892.78 517.45C1977.29 519.505 2026.92 612.947 1981.45 683.983L1742.87 1056.65C1728.28 1079.43 1718.77 1105.09 1715 1131.88C1711.22 1158.66 1713.27 1185.95 1721 1211.87L1847.34 1635.7C1871.42 1716.45 1797.88 1792.71 1716.03 1771.44L1287.55 1660.11C1261.36 1653.3 1234.01 1652.21 1207.36 1656.91C1180.72 1661.6 1155.39 1671.98 1133.11 1687.34L768.557 1938.51C698.913 1986.48 603.729 1939.98 598.726 1855.86L572.502 1414.38C569.257 1359.74 542.373 1309.24 498.866 1276.01L147.203 1007.41C80.1767 956.216 94.8588 851.43 173.566 820.594L585.833 659.08C636.813 639.107 676.599 597.967 694.813 546.348L842.026 129.177Z"
+          fill="var(--star-fill)" />
+        <path
+          d="M918.91 20.3875C868.969 29.1948 823.32 62.3526 804.42 115.904L657.186 533.07C642.831 573.741 611.52 606.123 571.327 621.871L159.044 783.395C53.2498 824.843 32.7918 970.356 122.981 1039.24L474.644 1307.81C491.576 1320.73 505.522 1337.15 515.528 1355.96C525.534 1374.76 531.366 1395.5 532.625 1416.76L558.835 1858.23C565.559 1971.49 697.668 2035.92 791.287 1971.44L791.289 1971.43L1155.87 1720.26L1155.87 1720.25C1173.42 1708.15 1193.38 1699.97 1214.37 1696.27C1235.37 1692.57 1256.92 1693.43 1277.55 1698.8L1277.55 1698.8L1706.04 1810.11C1816.06 1838.7 1918.17 1732.96 1885.75 1624.22L1885.75 1624.23L1759.42 1200.41L1759.42 1200.41C1753.33 1180 1751.72 1158.52 1754.69 1137.42C1757.66 1116.33 1765.15 1096.13 1776.65 1078.2L1776.65 1078.19L2015.25 705.513L2015.24 705.511C2076.44 609.933 2007.46 480.197 1893.87 477.434L1451.21 466.681C1408.06 465.633 1367.56 445.914 1340.17 412.608L1059.15 70.9554C1023.08 27.1014 968.841 11.5585 918.896 20.3665M932.34 96.6134C955.035 92.6111 979.819 100.451 997.365 121.779L1278.38 463.422C1320.52 514.663 1382.95 545.042 1449.26 546.655L1891.92 557.408C1947.35 558.754 1977.63 615.896 1947.86 662.382L1709.27 1035.06C1673.48 1090.93 1663.8 1159.69 1682.74 1223.26L1809.08 1647.07C1824.81 1699.85 1779.83 1746.62 1726.15 1732.68L1726.15 1732.68L1297.66 1621.36C1233.45 1604.67 1165.09 1616.73 1110.46 1654.38L745.884 1905.55C700.205 1937.02 641.945 1908.45 638.676 1853.48L612.469 1412.01C608.537 1345.78 575.914 1284.5 523.186 1244.22L171.524 975.65C127.662 942.151 136.58 878.1 188.203 857.867L600.485 696.341C662.256 672.139 710.525 622.24 732.608 559.671L732.608 559.669L879.842 142.504C889.034 116.463 909.64 100.618 932.335 96.6154"
+          fill="var(--star-border)" />
+        <path
+          d="M790.631 1144.08C833.367 1136.54 861.904 1095.79 854.37 1053.06C846.836 1010.32 806.085 981.793 763.349 989.329C720.613 996.866 692.076 1037.62 699.61 1080.35C707.144 1123.08 747.896 1151.62 790.631 1144.08Z"
+          fill="var(--star-features)" />
+        <path
+          d="M1423.7 1032.45C1466.43 1024.92 1494.97 984.164 1487.43 941.432C1479.9 898.699 1439.15 870.166 1396.41 877.703C1353.68 885.239 1325.14 925.991 1332.67 968.724C1340.21 1011.46 1380.96 1039.99 1423.7 1032.45Z"
+          fill="var(--star-features)" />
+        <path
+          d="M1042.09 1126.57C1037.19 1128.46 1032.71 1131.3 1028.9 1134.92C1025.1 1138.54 1022.04 1142.88 1019.92 1147.68C1017.79 1152.49 1016.63 1157.66 1016.5 1162.91C1016.37 1168.16 1017.28 1173.39 1019.17 1178.29C1024.11 1191.06 1031.51 1202.74 1040.96 1212.66L1040.96 1212.66C1050.41 1222.58 1061.72 1230.53 1074.25 1236.07L1074.26 1236.08C1086.77 1241.62 1100.25 1244.64 1113.94 1244.97L1113.95 1244.97L1113.97 1244.97C1127.65 1245.29 1141.26 1242.92 1154.03 1237.99L1154.04 1237.99C1166.81 1233.06 1178.49 1225.66 1188.4 1216.21L1188.41 1216.21L1188.41 1216.2C1198.32 1206.76 1206.27 1195.45 1211.81 1182.94C1217.37 1170.41 1220.39 1156.9 1220.71 1143.2C1220.96 1132.6 1216.99 1122.33 1209.67 1114.65C1202.34 1106.98 1192.27 1102.53 1181.66 1102.28C1176.41 1102.15 1171.19 1103.07 1166.29 1104.96C1161.39 1106.86 1156.91 1109.7 1153.11 1113.33C1149.31 1116.95 1146.26 1121.29 1144.14 1126.1C1142.02 1130.9 1140.86 1136.08 1140.74 1141.33C1140.66 1144.5 1139.96 1147.63 1138.67 1150.53L1138.67 1150.54L1138.66 1150.56C1137.37 1153.47 1135.52 1156.1 1133.22 1158.3C1130.91 1160.5 1128.2 1162.22 1125.23 1163.36L1125.21 1163.37C1122.23 1164.52 1119.06 1165.07 1115.87 1165C1112.69 1164.92 1109.55 1164.21 1106.64 1162.92L1106.62 1162.92L1106.61 1162.91C1103.7 1161.62 1101.08 1159.78 1098.88 1157.48L1098.88 1157.47L1098.88 1157.47C1096.68 1155.16 1094.96 1152.45 1093.81 1149.47C1091.92 1144.57 1089.08 1140.09 1085.46 1136.29C1081.83 1132.49 1077.5 1129.43 1072.69 1127.31C1067.89 1125.18 1062.71 1124.02 1057.46 1123.89C1052.21 1123.76 1046.99 1124.67 1042.09 1126.57Z"
+          fill="var(--star-features)" />
+
+      </symbol>
+
+      <filter id="starGlow" x="-200%" y="-200%" width="500%" height="500%">
+        <feGaussianBlur stdDeviation="3.5" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+
+    <rect width="100%" height="100%" fill="var(--underwater-blue)" />
+    <circle cx="540" cy="900" r="550" fill="var(--faff-pink)" opacity="0.04" />
+
+    <!-- Large stars -->
+    <use href="#lucy-star" class="star yellow face" x="-30" y="170" width="170" height="170" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink face" x="750" y="280" width="140" height="140" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star white" x="960" y="490" width="110" height="110" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink face" x="10" y="850" width="140" height="140" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink face" x="890" y="1020" width="170" height="170" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star yellow" x="40" y="1200" width="110" height="110" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink" x="740" y="1590" width="110" height="110" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star yellow face" x="120" y="1700" width="140" height="140" filter="url(#starGlow)" />
+    
+    <!-- Medium stars scattered around -->
+    <use href="#lucy-star" class="star pink" x="800" y="150" width="30" height="30" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star yellow" x="540" y="270" width="26" height="26" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink" x="780" y="640" width="32" height="32" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star white" x="805" y="950" width="28" height="28" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink" x="550" y="1240" width="24" height="24" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star yellow" x="920" y="1550" width="30" height="30" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star white" x="80" y="1350" width="27" height="27" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink" x="950" y="750" width="29" height="29" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star yellow" x="880" y="1850" width="26" height="26" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star white" x="50" y="550" width="28" height="28" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink" x="920" y="1280" width="25" height="25" filter="url(#starGlow)" />
+    
+    <!-- Small stars scattered throughout -->
+    <use href="#lucy-star" class="star yellow" x="450" y="440" width="20" height="20" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star white" x="700" y="1250" width="24" height="24" filter="url(#starGlow)" />
+    <use href="#lucy-star" class="star pink" x="300" y="750" width="17" height="17" />
+    <use href="#lucy-star" class="star yellow" x="600" y="300" width="14" height="14" />
+    <use href="#lucy-star" class="star white" x="200" y="1050" width="12" height="12" />
+    <use href="#lucy-star" class="star pink" x="900" y="550" width="16" height="16" />
+    <use href="#lucy-star" class="star white" x="350" y="380" width="13" height="13" />
+    <use href="#lucy-star" class="star pink" x="780" y="240" width="18" height="18" />
+    <use href="#lucy-star" class="star yellow" x="40" y="1480" width="15" height="15" />
+    <use href="#lucy-star" class="star pink" x="630" y="1620" width="19" height="19" />
+    <use href="#lucy-star" class="star white" x="850" y="1820" width="14" height="14" />
+    <use href="#lucy-star" class="star pink" x="520" y="1800" width="21" height="21" />
+    <use href="#lucy-star" class="star yellow" x="250" y="1140" width="16" height="16" />
+    <use href="#lucy-star" class="star white" x="940" y="790" width="18" height="18" />
+    <use href="#lucy-star" class="star pink" x="150" y="600" width="15" height="15" />
+    <use href="#lucy-star" class="star yellow" x="980" y="380" width="17" height="17" />
+    <use href="#lucy-star" class="star white" x="75" y="1020" width="13" height="13" />
+    <use href="#lucy-star" class="star pink" x="850" y="1140" width="16" height="16" />
+    <use href="#lucy-star" class="star yellow" x="420" y="1360" width="14" height="14" />
+    <use href="#lucy-star" class="star white" x="680" y="1720" width="15" height="15" />
+    <use href="#lucy-star" class="star pink" x="180" y="310" width="12" height="12" />
+    <use href="#lucy-star" class="star yellow" x="950" y="620" width="13" height="13" />
+    <use href="#lucy-star" class="star white" x="320" y="1580" width="16" height="16" />
+    <use href="#lucy-star" class="star pink" x="780" y="1420" width="14" height="14" />
+    <use href="#lucy-star" class="star yellow" x="530" y="850" width="12" height="12" />
+    <use href="#lucy-star" class="star white" x="400" y="1740" width="15" height="15" />
+    <use href="#lucy-star" class="star pink" x="960" y="1680" width="13" height="13" />
+    <use href="#lucy-star" class="star yellow" x="80" y="740" width="11" height="11" />
+    <use href="#lucy-star" class="star white" x="620" y="410" width="14" height="14" />
+    <use href="#lucy-star" class="star pink" x="340" y="1270" width="12" height="12" />
+    <use href="#lucy-star" class="star yellow" x="740" y="1850" width="16" height="16" />
+
+    <text x="540" y="150" font-family="Fredoka, sans-serif" font-weight="700" font-size="70" fill="var(--faff-pink)"
+      text-anchor="middle" letter-spacing="-1">
+      GLEAM GATHERING 2026
+    </text>
+
+    <text x="540" y="240" font-family="Fredoka, sans-serif" font-weight="700" font-size="70" fill="var(--white)"
+      text-anchor="middle" letter-spacing="-1">
+      CONFERENCE SCHEDULE
+    </text>
+
+
+    <g id="schedule-section">
+      <!-- Timeline vertical line -->
+      <line x1="120" y1="340" x2="120" y2="1660" stroke="var(--burgandy)" stroke-width="4" stroke-linecap="round" />
+
+      <!-- Schedule items with timeline dots -->
+      <!-- 09:20 Doors Open -->
+      <circle cx="120" cy="340" r="10" fill="var(--burgandy)" />
+      <text x="160" y="350" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>09:20</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Doors Open</tspan>
+      </text>
+
+      <!-- 09:45 Welcome -->
+      <circle cx="120" cy="420" r="10" fill="var(--burgandy)" />
+      <text x="160" y="430" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>09:45</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Welcome</tspan>
+      </text>
+
+      <!-- 10:00 Core Team Panel -->
+      <circle cx="120" cy="500" r="10" fill="var(--burgandy)" />
+      <text x="160" y="510" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>10:00</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Core Team Panel: Get to know the core team</tspan>
+      </text>
+
+      <!-- 10:50 Riding the Sour Train -->
+      <circle cx="120" cy="580" r="10" fill="var(--burgandy)" />
+      <text x="160" y="590" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>10:50</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Riding the Sour Train: Building surtoget.no</tspan>
+      </text>
+      <text x="280" y="630" font-family="Fredoka, sans-serif" font-weight="400" font-size="34" fill="white">
+        <tspan>with Gleam -</tspan> 
+        <tspan fill="var(--unnamed-blue)">John Mikael Lindbakk</tspan>
+      </text>
+
+      <!-- 11:20 Coffee Break -->
+      <circle cx="120" cy="700" r="10" fill="var(--burgandy)" />
+      <text x="160" y="710" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>11:20</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Coffee Break ☕</tspan>
+      </text>
+
+      <!-- 11:50 10,000 Lines Later -->
+      <circle cx="120" cy="780" r="10" fill="var(--burgandy)" />
+      <text x="160" y="790" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>11:50</tspan>
+        <tspan x="280" font-weight="400" font-size="34">10,000 Lines Later: When a Tool Became a</tspan>
+      </text>
+      <text x="280" y="830" font-family="Fredoka, sans-serif" font-weight="400" font-size="34" fill="white">
+        Compiler - <tspan fill="#8dd4e7">Rob Durst</tspan>
+      </text>
+
+      <!-- 12:25 Keynote -->
+      <circle cx="120" cy="900" r="10" fill="var(--burgandy)" />
+      <text x="160" y="910" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>12:25</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Happy (almost) 2nd Birthday Gleam - <tspan fill="#8dd4e7">Louis Pilfold</tspan>
+        </tspan>
+      </text>
+
+      <!-- 13:00 Lunch -->
+      <circle cx="120" cy="980" r="10" fill="var(--burgandy)" />
+      <text x="160" y="990" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>13:00</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Lunch 🥪</tspan>
+      </text>
+
+      <!-- 14:15 How I used Lustre -->
+      <circle cx="120" cy="1060" r="10" fill="var(--burgandy)" />
+      <text x="160" y="1070" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>14:15</tspan>
+        <tspan x="280" font-weight="400" font-size="34">How I used Lustre to build the best Eve</tspan>
+      </text>
+      <text x="280" y="1110" font-family="Fredoka, sans-serif" font-weight="400" font-size="34" fill="white">
+        Online arbitrage tool - <tspan fill="#8dd4e7">Guillaume Heu</tspan>
+      </text>
+
+      <!-- 14:50 Could WebAssembly -->
+      <circle cx="120" cy="1180" r="10" fill="var(--burgandy)" />
+      <text x="160" y="1190" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>14:50</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Could WebAssembly be in Gleam's future?</tspan>
+      </text>
+      <text x="280" y="1230" font-family="Fredoka, sans-serif" font-weight="400" font-size="34" fill="white">
+        - <tspan fill="#8dd4e7">Danielle Maywood</tspan>
+      </text>
+
+      <!-- 15:25 Lightning Talks -->
+      <circle cx="120" cy="1300" r="10" fill="var(--burgandy)" />
+      <text x="160" y="1310" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>15:25</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Lightning Talks ⚡</tspan>
+      </text>
+
+      <!-- 16:00 Coffee Break -->
+      <circle cx="120" cy="1380" r="10" fill="var(--burgandy)" />
+      <text x="160" y="1390" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>16:00</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Coffee Break ☕</tspan>
+      </text>
+
+      <!-- 16:30 Inside the Lustre runtime -->
+      <circle cx="120" cy="1460" r="10" fill="var(--burgandy)" />
+      <text x="160" y="1470" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>16:30</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Inside the Lustre runtime - <tspan fill="#8dd4e7">Rebecca Reusch
+          </tspan>
+        </tspan>
+      </text>
+
+      <!-- 17:05 Optimising the hell out of Gleam -->
+      <circle cx="120" cy="1540" r="10" fill="var(--burgandy)" />
+      <text x="160" y="1550" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>17:05</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Optimising the hell out of Gleam -</tspan>
+      </text>
+      <text x="280" y="1582" font-family="Fredoka, sans-serif" font-weight="400" font-size="34" fill="#8dd4e7">
+        Surya Rose
+      </text>
+
+      <!-- 17:35 Closing Remarks -->
+      <circle cx="120" cy="1660" r="10" fill="var(--burgandy)" />
+      <text x="160" y="1670" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="white">
+        <tspan>17:35</tspan>
+        <tspan x="280" font-weight="400" font-size="34">Closing Remarks</tspan>
+      </text>
+    </g>
+  </svg>
+</body>
+</html>
