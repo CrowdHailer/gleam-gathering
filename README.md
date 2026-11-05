@@ -9,3 +9,7 @@ Thoughts for further promotion.
 - Does EEF offer anything helpful here?
 - Share on HN/Lobsters? Probably after schedule published.
 - Share in Tech Exeter group. Is there a Bristol equivalent
+
+## Next year
+
+- Ask for a link to code/project if it's relevant to a talk submission.
